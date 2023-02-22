@@ -1,26 +1,23 @@
 $(document).ready(() => {
 
-    var clickBtn = $('#clickBtn');
-    var previousSearch = [];
+    var clickBtn = $('#search');
+    var priorSearch = [];
     createPriorList();
 
     //Function that runs displayWeather function on search button click.
     clickBtn.on('click', function(event){
         event.preventDefault();
-        var input = $('#getCity');
+        var input = $('#cityText');
         displayWeather(input.val());
-
     })
 
 
     //Function displays weather of a valid city input. Returns weather of input. If city is invalid, user is alerted. For loop runs through desired length of days.
-    
-
     function displayWeather(cityName){
         fetch("https://api.openweathermap.org/data/2.5/forecast?q="+cityName+"&units=imperial&appid=7a516f1ed38e70e2b0299f025745f5d6")
         .then(function (response) {
             if(response.status > 400 ){
-                alert("invalid entry. Please search again");
+                alert("Invalid Entry. Please search again.");
             } else {
                 var hidden = $('#hideThis')
                 hidden.attr("class","col-12 col-lg-9");
@@ -38,7 +35,7 @@ $(document).ready(() => {
                 $('.icon').eq(i).attr("src","http://openweathermap.org/img/wn/"+ data.list[i+1].weather[0].icon +".png");
                 $('.temp').eq(i).text("Temp: " + data.list[skip].main.temp + " °F");
                 $('.wind').eq(i).text("Wind: " + data.list[skip].wind.speed + " MPH");
-                $('.humid').eq(i).text("Humidity: " + data.list[skip].main.humidity + "%"); 
+                $('.humidity').eq(i).text("Humidity: " + data.list[skip].main.humidity + "%"); 
             }
             if(!priorSearch.includes(data.city.name)){
                 priorSearch.push(data.city.name);
@@ -49,7 +46,7 @@ $(document).ready(() => {
     }
 
     // Function displays previously searched cities.
-        function createPriorList(){
+    function createPriorList(){
         priorSearch = JSON.parse(localStorage.getItem("priorCity")) || [];
         $('#priorList').empty();
         for(var i = 0; i<priorSearch.length; i++){

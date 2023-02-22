@@ -5,24 +5,73 @@
     box-sizing: border-box;
 }
 
-body {
-    display: flex;
-}
-
 header {
-    text-align: center;
-    /* background-color: ; */
+    display: flex;
+    /* justify-content: space-between;
+    align-items: flex-end; */
+    background-color: blue;
+    color: white;
+    padding: 1%;
+    justify-content: center;
 }
 
 main {
-    
+    display: flex;
+    margin: 1%;
+    width: 98%;
 }
 
 aside {
+    width: 30%;
     display: flex;
     flex-direction: column;
 }
 
-footer {
-    
+#city-search {
+    display: flex;
+    width: 99%;
+    flex-direction: column;
+    border-bottom: 1px solid blue;
+    padding-bottom: 5px;
+}
+
+#cityText {
+    margin-bottom: 10px;
+}
+
+#search {
+    margin-bottom: 10px;
+    background-color: blue;
+    color: white;
+}
+
+#weather-container {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#current-weather {
+    display: flex;
+    align-items: center;
+    width: 100%;
+
+}
+
+#forecast-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.weather-card {
+    background-color: blue;
+    color: white;
+
+}
+
+.temp, .wind, .humidity {
+    font-size: 25px;
 }

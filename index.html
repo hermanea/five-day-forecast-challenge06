@@ -4,69 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>5-Day Weather Forecast</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
 </head>
 <body>
     <header>
         <h1>Weather Dashboard</h1>
     </header>
     <main>
-        <aside id="city-search">
-            
+        <aside>
+            <div id="city-search">
+                <h2>Search for a City:</h2>
+                <input type="text" placeholder="" id="cityText">
+                <button id="search">Search</button>
+            </div>
         </aside>
-        <section id="current-weather">
-            <h2></h2>
-            <img src="" alt="">
-            <p></p>
-            <p></p>
-            <p></p>
+        <section id="weather-container">
+            <div id="current-weather">
+                <h2><span id="city"></span>(<span class="date"></span>)<img class="icon" src=""></h2>
+                <img src="" alt="">
+                <p class="temp"></p>
+                <p class="wind"></p>
+                <p class="humidity"></p>
+            </div>
+            <div id="forecast-row">
+                <h2>5-Day Forecast:</h2>
+                <div class="weather-card">
+                    <h3><span class="date"></span></h3>
+                    <img class="icon" src="">
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                </div>
+                <div class="weather-card">
+                    <h3><span class="date"></span></h3>
+                    <img class="icon" src="">
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                </div>
+                <div class="weather-card">
+                    <h3><span class="date"></span></h3>
+                    <img class="icon" src="">
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                </div>
+                <div class="weather-card">
+                    <h3><span class="date"></span></h3>
+                    <img class="icon" src="">
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                </div>
+                <div class="weather-card">
+                    <h3><span class="date"></span></h3>
+                    <img class="icon" src="">
+                    <p class="temp"></p>
+                    <p class="wind"></p>
+                    <p class="humidity"></p>
+                </div>
+            </div>
         </section>
-
-        <section id="forecast-row">
-            <div class="weather-card">
-                <h3></h3>
-                <img src="" alt="">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="weahter-card">
-                <h3></h3>
-                <img src="" alt="">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="weather-card">
-                <h3></h3>
-                <img src="" alt="">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="weather-card">
-                <h3></h3>
-                <img src="" alt="">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="weather-card">
-                <h3></h3>
-                <img src="" alt="">
-                <p></p>
-                <p></p>
-                <p></p>
-            </div>
-        </section> 
-
     </main>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="./assets/js/script.js"</script>
-    <script 
+    <script src="./assets/js/script.js"></script>
+    <script
         src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
         integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
-        crossorigin="anonymous"
-    ></script>
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>
