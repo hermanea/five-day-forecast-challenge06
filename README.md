@@ -12,9 +12,11 @@ N/A
 
 To use the application, simply enter a city name in the input box. The current weather and 5-day forecast will be displayed. It saves previously searched cities that can be returned to if the user would like to check the weather again.
 
-Below is a screenshot of the application.
+Below is a screenshot of the app.
 
-You can use the application here.
+![Screenshot](/assets/images/screencapture-hermanea-github-io-five-day-forecast-challenge06-2023-02-22-12_15_33.png "App Screenshot")
+
+You can use the app [Here](https://hermanea.github.io/five-day-forecast-challenge06/).
 
 ## License
 
