@@ -9,7 +9,8 @@ header {
     display: flex;
     /* justify-content: space-between;
     align-items: flex-end; */
-    background-color: blue;
+    background: rgb(34,102,195);
+    background: linear-gradient(90deg, rgba(34,102,195,1) 9%, rgba(21,30,102,1) 85%);
     color: white;
     padding: 1%;
     justify-content: center;
@@ -22,7 +23,7 @@ main {
 }
 
 aside {
-    width: 30%;
+    width: 22%;
     display: flex;
     flex-direction: column;
 }
@@ -31,47 +32,106 @@ aside {
     display: flex;
     width: 99%;
     flex-direction: column;
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid slategray;
     padding-bottom: 5px;
 }
 
 #cityText {
     margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 2%;
+    border: 1px solid slategray;
 }
 
 #search {
     margin-bottom: 10px;
-    background-color: blue;
-    color: white;
+    background-color: #5A91EA;
+    color: lightgray;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 2%;
+    border: 1px solid #5A91EA;
 }
 
-#weather-container {
-    width: 70%;
+.weather-container {
+    width: 78%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin: 1%;
+    margin-right: 8%;
+}
+
+#weather-container {
+    display: none;
 }
 
 #current-weather {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    justify-content: space-between;
     width: 100%;
+    border: 1px solid slategray;
+    height: 200px;
+    margin-bottom: 15px;
+    padding: 1%;
+}
+
+#current-weather-header {
+    display: flex;
+    align-items: center;
 
 }
 
 #forecast-row {
     display: flex;
+    justify-content: flex-start;
     justify-content: space-between;
     align-items: flex-start;
+    /* flex-direction: column; */
     width: 100%;
 }
 
 .weather-card {
-    background-color: blue;
+    background-color: #3E4F6A;
     color: white;
-
+    padding: 5px;
+    justify-content: flex-start;
+    justify-content: space-between;
+    padding-right: 25px;
 }
 
 .temp, .wind, .humidity {
-    font-size: 25px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+#prior-search {
+    display: flex;
+    width: 99%;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+#priorList {
+    list-style: none;
+    padding: 0;
+
+}
+
+.priorCityBtn {
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 18px;
+    padding: 2%;
+    border: 1px solid lightgray;
+    background-color: lightgray;
+    width: 100%;
 }
